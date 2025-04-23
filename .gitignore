@@ -1,0 +1,6 @@
+/app.log
+/config/__pycache__/
+/app/__pycache__/
+/app/migrations/__pycache__/
+/app/network/__pycache__/
+/__pycache__/

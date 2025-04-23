@@ -1,0 +1,57 @@
+<!-- home.html -->
+{% extends 'base.html' %}
+
+{% block title %}Secteller - About{% endblock %}
+
+{% block header %}Report{% endblock %}
+
+{% block content %}
+{%if empty %} 
+    <p>{{empty}}</p>
+{% endif %}
+{% if result %}
+    <h2>Target</h2>
+    <p>{{result.target}}</p>
+    <h3>Headers</h3>
+        <ul>
+        {% for item in result.headers %}
+            <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+
+    <h3>DNS Records</h3>
+        <ul>
+        {% for item in result.dns_records %}
+            <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+
+    <h3>WHOIS Info</h3>
+        <ul>
+        {% for item in result.domain_info %}
+            <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+
+    <h3>Reverse DNS</h3>
+        <ul>
+        {% for item in result.reversed_dns %}
+            <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+
+    <h3>IP Info</h3>
+        <ul>
+        {% for item in result.ip_info %}
+            <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+
+    <h3>SSL Certificate</h3>
+        <ul>
+        {% for item in result.ssl_cert %}
+            <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+{% endif %}
+{% endblock %}

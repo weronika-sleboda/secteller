@@ -1,0 +1,33 @@
+[project]
+name = "secteller"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Weronika Sleboda",email = "weronika_sleboda@hotmail.com"}
+]
+requires-python = ">=3.13"
+dependencies = [
+    "django (>=5.2,<6.0)",
+    "requests (>=2.32.3,<3.0.0)",
+    "gunicorn (>=23.0.0,<24.0.0)",
+    "whitenoise (>=6.9.0,<7.0.0)",
+    "dnspython (>=2.7.0,<3.0.0)",
+    "python-whois (>=0.9.5,<0.10.0)",
+    "ipwhois (>=1.3.0,<2.0.0)",
+    "cryptography (>=44.0.2,<45.0.0)",
+    "django-ratelimit (>=4.1.0,<5.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+dev = "dev:run_server"
+
+[tool.poetry]
+packages = [
+    { include = "app" },
+    { include = "config" },
+]

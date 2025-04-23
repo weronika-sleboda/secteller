@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Armata&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="icon" href="{% static 'img/secteller-shortcut.svg' %}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="logo">
+        {% load static %}
+        <img alt="Secteller Logo" src="{% static 'img/secteller-logo.svg' %}">
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="{% url 'analysis' %}">Analysis</a></li>
+            <li><a href="{% url 'report' %}">Report</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+    <h1 class="header">{% block header %}{% endblock %}</h1>
+    <main class="main">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Weronika Sleboda · Built with Python, Django & Poetry</p>
+    </footer>
+</body>
+</html>
