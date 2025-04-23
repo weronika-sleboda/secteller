@@ -152,9 +152,9 @@ class Domain:
             response = target.lookup_rdap()
             log(LogType.INFO, f"(Domain) IP info for {self.domain}")
             ip_info = []
-            ip_info.append(f"ASN: {response.get("asn")}")
-            ip_info.append(f"ASN Description: {response.get("asn_description")}")
-            ip_info.append(f"Network: {response.get("network", {}).get("name")}")
+            ip_info.append(f"ASN: {response.get('asn')}")
+            ip_info.append(f"ASN Description: {response.get('asn_description')}")
+            ip_info.append(f"Network: {response.get('network', {}).get('name')}")
             return ip_info
         except Exception as error:
             log(LogType.ERROR, f"(Domain) ip_info | {error}")
