@@ -130,8 +130,8 @@ class Domain:
             response = socket.gethostbyaddr(self._ip)
             log(LogType.INFO, f"(Domain) Reversed dns for {self.domain}")
             reversed_dns = []
-            aliases = f"Aliases: {(" , ").join(response[1])}"
-            ips = f"IPs: {(" , ").join(response[2])}"
+            aliases = f"Aliases: {' , '.join(response[1])}"
+            ips = f"IPs: {' , '.join(response[2])}"
             reversed_dns.append(f"Host: {response[0]}")
             if response[1]:
                 reversed_dns.append(aliases)
