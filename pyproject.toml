@@ -1,7 +1,7 @@
 [project]
-name = "secteller"
+name = "config"
 version = "0.1.0"
-description = "A Django app to analyze domain info (DNS, WHOIS, SSL, etc.) using public data, with automatic censorship of sensitive information for security."
+description = "Web Security Analyzer"
 authors = [
     {name = "Weronika Sleboda",email = "weronika_sleboda@hotmail.com"}
 ]
