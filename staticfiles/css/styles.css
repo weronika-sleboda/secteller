@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 90%;
 }
 
 .nav {
@@ -84,7 +84,7 @@ body {
     justify-content: center;
     align-items: start;
     flex-direction: column;
-    width: 500px;
+    width: 40%;
     padding: 0;
     margin-bottom: 120px;
     text-align: start;
@@ -124,7 +124,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
+    width: 100vw;
     height: 100px;
     background-color: #1d1c21;
     display: flex;
@@ -137,13 +137,10 @@ body {
 }
 
 form {
-    width: 320px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    width: 100%;
+    display:block;
     box-sizing: border-box;
-    margin: 1rem auto;
+    margin: auto;
     padding: 1rem;
     background-color: #353340;
     box-shadow: 2px 3px 4px 5px rgb(35, 36, 41);
@@ -151,20 +148,19 @@ form {
 }
 
 form input {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     width: 100%;
     font-size: 1.2rem;
     background-color: #1d1d24;
     color: #ffc1ff;
     border-radius: 20px;
     border: 3px solid rgb(169, 110, 157);
-    padding: 0.5rem 0;
+    padding: 0.5rem;
     text-align: center;
     box-sizing: border-box;
-    margin: auto;
+    margin: 1rem auto;
 }
 
 form input:hover {
@@ -173,22 +169,20 @@ form input:hover {
 }
 
 form label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: block;
     height: 30px;
     width: 100%;
     font-size: 1rem;
     padding: 1rem 0;
     box-sizing: border-box;
-    margin: auto;
+    margin: 1rem auto;
+    text-align: center;
 }
 
 form button {
     width: 100%;
     box-sizing: border-box;
-    margin: 1rem;
+    margin: 1rem auto;
     background: linear-gradient(180deg, rgb(227, 219, 255),rgb(92, 82, 130));
     height: 40px;
     border: none;
@@ -220,13 +214,15 @@ ul.errorlist li {
     font-size: 14px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
     .main {
-        width: 320px;
+        width: 80%;
     }
+
     .nav {
         font-size: 1.3rem;
     }
+
     .header {
         font-size: 1.5rem;
     }
@@ -234,4 +230,26 @@ ul.errorlist li {
     .footer {
         font-size: 1rem;
     }
-  }
+}
+
+@media (max-width: 400px) {
+    .main {
+        width: 95%;
+    }
+
+    .nav {
+        font-size: 1rem;
+    }
+
+    form label, .footer {
+        font-size: 0.8rem;
+    }
+
+    .header {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        width: 150px;
+    }
+}
